@@ -1,0 +1,6 @@
+library(dslabs)
+library(caret)
+data(mnist_27)
+# set.seed(1995) # if R 3.5 or earlier
+set.seed(1995, sample.kind="Rounding") # if R 3.6 or later
+indexes <- createResample(mnist_27$train$y, 10)
